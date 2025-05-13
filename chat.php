@@ -22,9 +22,14 @@ if (!isset($_SESSION['usuario_id'])) {
     <div class="chat-container">
         <div class="chat-header">
             <h2>Chat Corporativo</h2>
-            <div class="user-info">
-                <span id="nome-usuario"><?php echo $_SESSION['nome_usuario']; ?></span>
-                <span class="status online"></span>
+            <div class="header-controls">
+                <div class="user-info">
+                    <span id="nome-usuario"><?php echo htmlspecialchars($_SESSION['nome_usuario']); ?></span>
+                    <span class="status online"></span>
+                </div>
+                <a href="logout.php" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Sair
+                </a>
             </div>
         </div>
         
